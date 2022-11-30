@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const dotenv = require('dotenv');
 const client = require('./connection');
-
+const pg= require('pg');
 dotenv.config();
 
 
