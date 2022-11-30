@@ -32,7 +32,7 @@ app.post("/api", (request, response) => {
     });
   });
 
-  client.connect();
+
   const PORT = process.env.PORT || 3300;
 
   app.listen(PORT, console.log('app running'));
