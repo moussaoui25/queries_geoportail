@@ -32,7 +32,29 @@ app.post("/api", (request, response) => {
     });
   });
 
+  const pool = new pg.Pool();
 
+  app.get('/bureau_topo', async (req, res) => {
+    const { rows } = await pool.query("SELECT * FROM bureau_topo")
+  
+    res.json(rows)
+  });
+
+  app.get('/cafe2', async (req, res) => {
+    const { rows } = await pool.query("SELECT * FROM bureau_topo")
+  
+    res.json(rows)
+  });
+  app.get('/bus', async (req, res) => {
+    const { rows } = await pool.query("SELECT * FROM bureau_topo")
+  
+    res.json(rows)
+  });
+  app.get('/regions_wgs', async (req, res) => {
+    const { rows } = await pool.query("SELECT * FROM bureau_topo")
+  
+    res.json(rows)
+  });
   const PORT = process.env.PORT || 3300;
 
   app.listen(PORT, console.log('app running'));
